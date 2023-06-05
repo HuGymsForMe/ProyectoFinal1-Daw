@@ -1,6 +1,5 @@
 from datetime import datetime
 
-from clases.agenda import Agenda
 from clases.contactoempresa import ContactoEmpresa
 from clases.contactopersona import ContactoPersona
 

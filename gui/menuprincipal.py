@@ -22,7 +22,6 @@ class MenuAgenda(Menu):
     
     def __init__(self, app):
         self._app = app
-        self._sobreescribir = Agenda()
         self.menu_aniadir_contactos = MenuAddContactos(self._app)
     
     def main(self):
@@ -106,7 +105,7 @@ class MenuAgenda(Menu):
             print(f"="*ANCHO_MENU)
             print(f"CONTACTO ENCONTRADO".center(ANCHO_MENU))
             print(f"="*ANCHO_MENU)
-            for indice in range(len(self._app.contactos._contactos)):
+            for indice in self._app.contactos._contactos:
                 if self._app.contactos._contactos[indice]._nombre == nombre:
                     print(repr(self._app.contactos._contactos[indice]))
             print(f"="*ANCHO_MENU)
